@@ -6,6 +6,7 @@ class GameLogic():
 
     @staticmethod
     def calculate_score(calc):
+        amount = 0
         score = 0
         pair = 0
         pairs = Counter(calc).most_common()
@@ -52,6 +53,29 @@ class GameLogic():
             roll_dice_list.append(random.randint(1, 6))
 
         return tuple(roll_dice_list)
+
+    @staticmethod
+    def validate_keepers(roll, keep):
+        roll_most_common = Counter(roll).most_common()
+        keep_most_common = Counter(keep).most_common()
+
+        for i in range(len(keep_most_common)):
+            if keep_most_common[i][1] > roll_most_common[i][1]:
+                return False
+            else:
+                return True
+
+    @staticmethod
+    def get_scorers(dice):
+        dice_list = []
+
+        for int_ in dice:
+            if int_ == 1:
+                dice_list.append(int_)
+            elif int_ == 5:
+                dice_list.append(int_)
+
+        return tuple(dice_list)
 
 
 class Banker:

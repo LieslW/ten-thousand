@@ -7,7 +7,6 @@ welcome_message = """
 
 
 class Game:
-
     def __init__(self):
         self.bank = Banker()
 
@@ -81,3 +80,4 @@ class Game:
 if __name__ == "__main__":
     game = Game()
     game.play()
+
