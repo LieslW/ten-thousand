@@ -4,16 +4,33 @@ Project: Ten Thousand
 Author: Liesl White
 
 ## Links and Resources  
+[Game Methods](ten_thousand/game_logic.py)
+[Game](ten_thousand/game.py)
+
+[Version 1](tests/version_1)
+[Version 2](tests/version_2)
 
 ## Setup
 .env requirements (where applicable)
 i.e.
 
 ## How to initialize/run your application (where applicable)
-e.g. python main.py
-How to use your library (where applicable)
+
+To run game:
+```python
+
+python3 ten_thousand/game.py
+
+```
+
+To run tests:
+```python 
+
+source .venv/bin/Activate
+pip install -r requirements.txt
+pytest
+
+```
 
 ## Tests
-How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
+To run the tests, just use the commands above, "to run tests". 
