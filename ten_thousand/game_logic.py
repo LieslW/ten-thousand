@@ -50,5 +50,5 @@ class GameLogic():
 
         for i in range(number):
             roll_dice_list.append(random.randint(1, 6))
-            
+
         return tuple(roll_dice_list)
