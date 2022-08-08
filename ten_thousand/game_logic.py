@@ -52,3 +52,23 @@ class GameLogic():
             roll_dice_list.append(random.randint(1, 6))
 
         return tuple(roll_dice_list)
+
+
+class Banker:
+    def __init__(self):
+        self.balance = 0
+        self.shelved = 0
+
+    def shelf(self, number):
+        self.shelved += number
+        return self.shelved
+
+    def bank(self):
+        amount_deposited = self.shelved
+        self.balance += self.shelved
+        self.shelved = 0
+        return amount_deposited
+
+    def clear_shelf(self):
+        self.shelved = 0
+        return self.shelved
